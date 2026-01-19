@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/accordion"
 import { motion } from "framer-motion";
 
-const faqs = [
+const defaultFaqs = [
     {
         question: "Why should I hire a specialized doctor marketing company?",
         answer: "General marketing agencies often use generic strategies that don't work in healthcare. A specialized doctor marketing company understands medical ethics, patient psychology, and the specific regulations (like MCI guidelines) that doctors must follow. We ensure your growth is safe, professional, and targeted."
@@ -31,9 +31,15 @@ const faqs = [
     }
 ];
 
-export function FAQ() {
+interface FAQProps {
+    customFaqs?: Array<{ question: string; answer: string; }>;
+}
+
+export function FAQ({ customFaqs }: FAQProps) {
+    const data = customFaqs || defaultFaqs;
+
     return (
-        <section className="py-24 bg-white">
+        <section className="py-24 bg-gradient-to-b from-white to-slate-50" id="faq">
             <div className="container mx-auto px-4 md:px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -46,18 +52,22 @@ export function FAQ() {
                         Frequently Asked Questions
                     </h2>
                     <p className="text-lg text-slate-600">
-                        Common questions about hiring a doctor marketing company.
+                        Everything you need to know about growing your medical practice.
                     </p>
                 </motion.div>
 
                 <div className="max-w-3xl mx-auto">
-                    <Accordion type="single" collapsible className="w-full">
-                        {faqs.map((faq, i) => (
-                            <AccordionItem key={i} value={`item-${i}`}>
-                                <AccordionTrigger className="text-lg font-semibold text-slate-900 text-left">
+                    <Accordion type="single" collapsible className="w-full space-y-4">
+                        {data.map((faq, i) => (
+                            <AccordionItem
+                                key={i}
+                                value={`item-${i}`}
+                                className="border border-slate-200 bg-white rounded-xl px-6 data-[state=open]:border-blue-200 data-[state=open]:ring-2 data-[state=open]:ring-blue-50 transition-all duration-200 shadow-sm hover:shadow-md"
+                            >
+                                <AccordionTrigger className="text-lg font-semibold text-slate-900 text-left py-6 hover:no-underline hover:text-blue-600 transition-colors">
                                     {faq.question}
                                 </AccordionTrigger>
-                                <AccordionContent className="text-slate-600 leading-relaxed text-base">
+                                <AccordionContent className="text-slate-600 leading-relaxed text-base pb-6">
                                     {faq.answer}
                                 </AccordionContent>
                             </AccordionItem>

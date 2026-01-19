@@ -1,57 +1,87 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { Mail, Phone, MapPin, Instagram, Linkedin, Twitter } from 'lucide-react';
 
 export function Footer() {
     return (
-        <footer className="bg-slate-900 text-white py-12 md:py-20">
+        <footer className="bg-slate-950 text-white pt-24 pb-12 border-t border-slate-900">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-slate-800 pb-12 mb-12">
-                    <div className="col-span-1 md:col-span-1">
-                        <div className="relative h-12 w-48 mb-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+                    {/* Brand Section */}
+                    <div className="lg:col-span-4">
+                        <div className="relative h-12 w-48 mb-8">
                             <Image
                                 src="/logo.png"
                                 alt="Epsilon Technology"
                                 fill
-                                className="object-contain object-left brightness-0 invert opacity-90 hover:opacity-100 transition-opacity"
+                                className="object-contain object-left brightness-0 invert"
                             />
                         </div>
-                        <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
-                            Specialised in doctor social media growth. Delivering IT & app development globally.
+                        <p className="text-slate-400 text-lg leading-relaxed mb-8 max-w-sm">
+                            We bridge the gap between healthcare and digital growth. Specialized marketing for doctors who want to lead.
                         </p>
+                        <div className="flex gap-4">
+                            <Link href="https://www.instagram.com/epsilon.technology/" target="_blank" className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all">
+                                <Instagram size={18} />
+                            </Link>
+                            <Link href="#" className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all">
+                                <Linkedin size={18} />
+                            </Link>
+                            <Link href="#" className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all">
+                                <Twitter size={18} />
+                            </Link>
+                        </div>
                     </div>
 
-                    <div>
-                        <h4 className="text-lg font-bold mb-6 text-white">Services</h4>
+                    {/* Services */}
+                    <div className="lg:col-span-2">
+                        <h4 className="text-sm font-bold uppercase tracking-widest mb-8 text-slate-200">Services</h4>
                         <ul className="space-y-4 text-slate-400 text-sm">
-                            <li><Link href="/" className="hover:text-primary transition-colors">Doctor Social Growth</Link></li>
-                            <li><Link href="/it-services" className="hover:text-primary transition-colors">IT Services</Link></li>
-                            <li><Link href="/it-services#services" className="hover:text-primary transition-colors">App Development</Link></li>
-                            <li><Link href="/it-services#services" className="hover:text-primary transition-colors">Web Design</Link></li>
+                            <li><Link href="/" className="hover:text-blue-400 transition-colors">Doctor Marketing</Link></li>
+                            <li><Link href="/it-services" className="hover:text-blue-400 transition-colors">IT Solutions</Link></li>
+                            <li><Link href="/it-services#services" className="hover:text-blue-400 transition-colors">App Development</Link></li>
+                            <li><Link href="/it-services#services" className="hover:text-blue-400 transition-colors">Web Systems</Link></li>
                         </ul>
                     </div>
 
-                    <div>
-                        <h4 className="text-lg font-bold mb-6 text-white">Company</h4>
+                    {/* Locations */}
+                    <div className="lg:col-span-3">
+                        <h4 className="text-sm font-bold uppercase tracking-widest mb-8 text-slate-200">Our Reach</h4>
                         <ul className="space-y-4 text-slate-400 text-sm">
-                            <li><Link href="/it-services#about" className="hover:text-primary transition-colors">About Us</Link></li>
-                            <li><Link href="/it-services#portfolio" className="hover:text-primary transition-colors">Portfolio</Link></li>
-                            <li><Link href="#contact" className="hover:text-primary transition-colors">Contact</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
+                            <li><Link href="/doctor-marketing-in-junagadh" className="hover:text-blue-400 transition-colors">Marketing in Junagadh</Link></li>
+                            <li><Link href="/doctor-marketing-in-rajkot" className="hover:text-blue-400 transition-colors">Marketing in Rajkot</Link></li>
+                            <li><Link href="/doctor-marketing-in-morbi" className="hover:text-blue-400 transition-colors">Marketing in Morbi</Link></li>
+                            <li><Link href="/digital-marketing-in-junagadh" className="hover:text-blue-400 transition-colors">Digital Agency Junagadh</Link></li>
                         </ul>
                     </div>
 
-                    <div>
-                        <h4 className="text-lg font-bold mb-6 text-white">Contact</h4>
-                        <address className="not-italic text-slate-400 text-sm space-y-4">
-                            <p>Junagadh, Gujarat, India</p>
-                            <p><a href="mailto:jaydeep@epsilon-technology.com" className="hover:text-white">jaydeep@epsilon-technology.com</a></p>
-                            <p><a href="tel:+917359315576" className="hover:text-white">+91 73593 15576</a></p>
-                        </address>
+                    {/* Contact */}
+                    <div className="lg:col-span-3">
+                        <h4 className="text-sm font-bold uppercase tracking-widest mb-8 text-slate-200">Get in Touch</h4>
+                        <div className="space-y-6 text-slate-400 text-sm">
+                            <div className="flex items-start gap-3">
+                                <MapPin size={18} className="text-blue-500 shrink-0 mt-0.5" />
+                                <p>Junagadh, Gujarat, India - 362001</p>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <Mail size={18} className="text-blue-500 shrink-0" />
+                                <a href="mailto:jaydeep@epsilon-technology.com" className="hover:text-white transition-colors">jaydeep@epsilon-technology.com</a>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <Phone size={18} className="text-blue-500 shrink-0" />
+                                <a href="tel:+917359315576" className="hover:text-white transition-colors">+91 73593 15576</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div className="text-center text-slate-500 text-sm">
-                    © {new Date().getFullYear()} Epsilon Technology. All rights reserved.
+                <div className="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-xs">
+                    <p>© {new Date().getFullYear()} Epsilon Technology. All rights reserved.</p>
+                    <div className="flex gap-8">
+                        <Link href="/about" className="hover:text-white transition-colors">The Founder</Link>
+                        <Link href="/blog" className="hover:text-white transition-colors">Resources</Link>
+                        <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
+                    </div>
                 </div>
             </div>
         </footer>

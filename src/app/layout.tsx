@@ -66,6 +66,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { GoogleAnalytics } from '@next/third-parties/google';
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -98,10 +100,16 @@ export default function RootLayout({
               },
               "sameAs": [
                 "https://www.instagram.com/epsilon.technology/"
-              ]
+              ],
+              "founder": {
+                "@type": "Person",
+                "name": "Jaydeep Kataria",
+                "url": "https://epsilon-technology.com/about"
+              }
             })
           }}
         />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ''} />
       </body>
     </html>
   );

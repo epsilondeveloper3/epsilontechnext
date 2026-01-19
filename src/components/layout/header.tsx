@@ -68,8 +68,8 @@ export function Header() {
                             key={link.name}
                             href={link.href}
                             className={`font-medium transition-colors ${pathname === link.href
-                                    ? (isDarkHero ? 'text-blue-400' : 'text-primary font-semibold')
-                                    : (isDarkHero ? 'text-slate-200 hover:text-white' : 'text-slate-600 hover:text-primary')
+                                ? (isDarkHero ? 'text-blue-400' : 'text-primary font-semibold')
+                                : (isDarkHero ? 'text-slate-200 hover:text-white' : 'text-slate-600 hover:text-primary')
                                 }`}
                         >
                             {link.name}
