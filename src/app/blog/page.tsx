@@ -14,6 +14,114 @@ export const metadata: Metadata = {
 
 const posts = [
     {
+        title: "Digital Marketing for General Surgeons: The Authority Guide",
+        excerpt: "Learn how general surgeons can build deep clinical authority, dominate high-intent search, and provide digital reassurance.",
+        date: "Jan 23, 2026",
+        author: "Jaydeep Kataria",
+        slug: "digital-marketing-for-general-surgeons",
+        category: "Surgical",
+        isExternal: true
+    },
+    {
+        title: "Digital Marketing for Spine Specialists: The Pillar Guide",
+        excerpt: "Learn how spine surgeons and back pain clinics can build deep digital authority and attract complex surgical cases.",
+        date: "Jan 23, 2026",
+        author: "Jaydeep Kataria",
+        slug: "digital-marketing-for-spine-specialists",
+        category: "Spine Care",
+        isExternal: true
+    },
+    {
+        title: "Digital Marketing for Ayurvedic Doctors: Bridging Traditions",
+        excerpt: "Learn how Ayurvedic practitioners can translate ancient health wisdom into a dominant and trusted modern digital presence.",
+        date: "Jan 23, 2026",
+        author: "Jaydeep Kataria",
+        slug: "digital-marketing-for-ayurvedic-doctors",
+        category: "Holistic",
+        isExternal: true
+    },
+    {
+        title: "Digital Marketing for Dermatologists: The Aesthetic Growth Guide",
+        excerpt: "Deep dive into visual excellence, aesthetic SEO, and premium branding for modern skin clinics and dermatologists.",
+        date: "Jan 23, 2026",
+        author: "Jaydeep Kataria",
+        slug: "digital-marketing-for-dermatologists",
+        category: "Aesthetic",
+        isExternal: true
+    },
+    {
+        title: "Digital Marketing for Surgeon Doctors: Building Clinical Authority",
+        excerpt: "Learn how surgeons can leverage digital authority and high-intent search to reach more complicated cases.",
+        date: "Jan 23, 2026",
+        author: "Jaydeep Kataria",
+        slug: "digital-marketing-for-surgeon-doctors",
+        category: "Surgical",
+        isExternal: true
+    },
+    {
+        title: "Digital Marketing for Pediatric Doctors: Building Parental Trust",
+        excerpt: "A guide for child healthcare providers on building a reliable, visible, and trusted presence for modern parents.",
+        date: "Jan 23, 2026",
+        author: "Jaydeep Kataria",
+        slug: "digital-marketing-for-pediatric-doctors",
+        category: "Pediatric",
+        isExternal: true
+    },
+    {
+        title: "Digital Marketing for Gynecologist Doctors: Compassionate Growth",
+        excerpt: "Understanding how to build an authoritative and empathetic digital presence for women's healthcare specialists.",
+        date: "Jan 23, 2026",
+        author: "Jaydeep Kataria",
+        slug: "digital-marketing-for-gynecologist-doctors",
+        category: "Women's Health",
+        isExternal: true
+    },
+    {
+        title: "Digital Marketing for Dental Doctors: Building a Bright Practice",
+        excerpt: "Deep dive into dental SEO, local search dominance, and trust-building visuals for modern dental clinics.",
+        date: "Jan 23, 2026",
+        author: "Jaydeep Kataria",
+        slug: "digital-marketing-for-dental-doctors",
+        category: "Dental",
+        isExternal: true
+    },
+    {
+        title: "Digital Marketing for IVF Doctors: The Fertility Journey",
+        excerpt: "Helping fertility specialists build trust and provide educational clarity to couples in the digital sphere.",
+        date: "Jan 23, 2026",
+        author: "Jaydeep Kataria",
+        slug: "digital-marketing-for-ivf-doctors",
+        category: "Fertility",
+        isExternal: true
+    },
+    {
+        title: "Digital Marketing for Orthopedic Doctors: A Surgeon's Guide",
+        excerpt: "Discover specialized strategies for orthopedic surgeons to build trust, attract surgical cases, and dominate local search.",
+        date: "Jan 23, 2026",
+        author: "Jaydeep Kataria",
+        slug: "digital-marketing-for-orthopedic-doctors",
+        category: "Specialized",
+        isExternal: true
+    },
+    {
+        title: "Digital Marketing for Doctors in Junagadh: A Local Guide",
+        excerpt: "Learn how Junagadh-based doctors can leverage local SEO, Google Maps, and reviews to grow their practice in our city.",
+        date: "Jan 23, 2026",
+        author: "Jaydeep Kataria",
+        slug: "digital-marketing-for-doctors-in-junagadh",
+        category: "Local Guide",
+        isExternal: true
+    },
+    {
+        title: "The Ultimate Guide to Digital Marketing for Doctors (2025)",
+        excerpt: "A comprehensive informational guide for healthcare professionals looking to build a trusted digital reputation and grow their practice.",
+        date: "Jan 23, 2026",
+        author: "Jaydeep Kataria",
+        slug: "digital-marketing-for-doctors",
+        category: "Educational",
+        isExternal: true // Custom flag to handle different path structure if needed
+    },
+    {
         title: "7 Proven Marketing Ideas for Doctors in Junagadh (2025 Guide)",
         excerpt: "Are you a doctor in Junagadh looking to increase your patient footfall? Here are 7 actionable strategies to grow your clinic... ",
         date: "Jan 15, 2026",
@@ -39,7 +147,11 @@ export default function BlogIndex() {
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     {posts.map((post, i) => (
-                        <Link href={`/blog/${post.slug}`} key={i} className="group cursor-pointer">
+                        <Link
+                            href={post.isExternal ? `/${post.slug}` : `/blog/${post.slug}`}
+                            key={i}
+                            className="group cursor-pointer"
+                        >
                             <article className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-slate-100 h-full flex flex-col">
                                 <div className="h-48 bg-blue-100 relative overflow-hidden">
                                     {/* Placeholder for blog image */}

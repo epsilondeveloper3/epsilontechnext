@@ -5,6 +5,7 @@ import { FAQ } from '@/components/sections/FAQ';
 import { Booking } from '@/components/sections/Booking';
 import { Testimonials } from '@/components/sections/Testimonials';
 import { DoctorsWeWorkWith } from '@/components/sections/DoctorsWeWorkWith';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
     title: "Doctor Marketing in Junagadh | Grow Your Clinic with Epsilon Technology",
@@ -155,7 +156,29 @@ export default function DoctorMarketingJunagadh() {
                 </div>
             </section>
 
-            {/* 5. Existing Components Refitted */}
+            {/* 5. Related Blog Post */}
+            <section className="py-20 bg-blue-600 text-white">
+                <div className="container mx-auto px-4 md:px-6 text-center max-w-3xl">
+                    <h2 className="text-3xl font-bold mb-6">Want specific ideas for your clinic?</h2>
+                    <p className="text-blue-100 text-lg mb-8 leading-relaxed">
+                        Read our latest guide: "7 Proven Marketing Ideas for Doctors in Junagadh (2025)" to learn actionable strategies you can start today.
+                    </p>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <Link href="/blog/doctor-marketing-ideas-junagadh">
+                            <Button size="xl" variant="secondary" className="bg-white text-blue-600 hover:bg-blue-50 w-full sm:w-auto">
+                                Read 7 Marketing Ideas
+                            </Button>
+                        </Link>
+                        <Link href="/digital-marketing-for-doctors-in-junagadh">
+                            <Button size="xl" variant="outline" className="border-white text-white hover:bg-blue-700 w-full sm:w-auto">
+                                View Local Guide
+                            </Button>
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+            {/* 6. Existing Components Refitted */}
             <DoctorsWeWorkWith />
             <Testimonials />
 

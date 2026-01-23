@@ -44,7 +44,7 @@ const doctors = [
     {
         name: "Dr. Priyank Bagtharia",
         specialty: "Orthopedic Surgeon",
-        city: "Rajkot",
+        city: "Junagadh",
         result: "High Engagement Reels",
         image: "/images/doctors/dr-priyank-bagtharia.png",
         initials: "PB",
