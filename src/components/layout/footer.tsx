@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, Phone, MapPin, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Linkedin, Dribbble } from 'lucide-react';
 
 export function Footer() {
     return (
@@ -21,14 +21,14 @@ export function Footer() {
                             We bridge the gap between healthcare and digital growth. Specialized marketing for doctors who want to lead.
                         </p>
                         <div className="flex gap-4">
-                            <Link href="https://www.instagram.com/epsilon.technology/" target="_blank" className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all">
+                            <Link href="https://www.instagram.com/epsilontechnology/" target="_blank" className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all">
                                 <Instagram size={18} />
                             </Link>
-                            <Link href="#" className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all">
+                            <Link href="https://www.linkedin.com/company/epsilon-technology8" className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all">
                                 <Linkedin size={18} />
                             </Link>
-                            <Link href="#" className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all">
-                                <Twitter size={18} />
+                            <Link href="https://dribbble.com/epsilontech" className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:bg-[#ea4c89] hover:text-white hover:border-[#ea4c89] transition-all">
+                                <Dribbble size={18} />
                             </Link>
                         </div>
                     </div>

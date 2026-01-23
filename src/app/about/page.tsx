@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { CheckCircle2, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { CheckCircle2, Dribbble, Instagram, Linkedin } from 'lucide-react';
 
 export const metadata: Metadata = {
     title: "About Jaydeep Kataria | Epsilon Technology Founder",
@@ -36,14 +36,14 @@ export default function AboutPage() {
                         </p>
 
                         <div className="flex gap-4 mb-8">
-                            <Link href="https://www.instagram.com/epsilon.technology/" target="_blank" className="p-3 bg-slate-100 rounded-full hover:bg-blue-100 hover:text-blue-600 transition-colors">
+                            <Link href="https://www.instagram.com/epsilontechnology/" target="_blank" className="p-3 bg-slate-100 rounded-full hover:bg-blue-100 hover:text-blue-600 transition-colors">
                                 <Instagram size={24} />
                             </Link>
-                            <Link href="#" className="p-3 bg-slate-100 rounded-full hover:bg-blue-100 hover:text-blue-600 transition-colors">
+                            <Link href="https://www.linkedin.com/company/epsilon-technology8" className="p-3 bg-slate-100 rounded-full hover:bg-blue-100 hover:text-blue-600 transition-colors">
                                 <Linkedin size={24} />
                             </Link>
-                            <Link href="#" className="p-3 bg-slate-100 rounded-full hover:bg-blue-100 hover:text-blue-600 transition-colors">
-                                <Twitter size={24} />
+                            <Link href="https://dribbble.com/epsilontech" className="p-3 bg-slate-100 rounded-full hover:bg-pink-100 hover:text-pink-600 transition-colors">
+                                <Dribbble size={24} />
                             </Link>
                         </div>
 
@@ -133,7 +133,7 @@ export default function AboutPage() {
                         "sameAs": [
                             "https://www.instagram.com/jaydeepkataria/",
                             "https://www.linkedin.com/in/jaydeepkataria",
-                            "https://www.x.com/jaydeepkataria/",
+                            "https://dribbble.com/epsilontech",
                         ]
                     })
                 }}
