@@ -2,7 +2,7 @@
 
 import { LayoutGrid, Smartphone, Globe, ShoppingCart, Cpu, Code2, ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/animations/FadeIn";
-import Image from "next/image";
+import Link from "next/link";
 
 const services = [
     {
@@ -11,7 +11,8 @@ const services = [
         icon: Smartphone,
         color: "bg-sky-50 text-sky-600",
         gradient: "from-sky-50 to-blue-50",
-        border: "group-hover:border-sky-200"
+        border: "group-hover:border-sky-200",
+        href: "/services/mobile-app-development"
     },
     {
         title: "Ecommerce Stores",
@@ -19,31 +20,38 @@ const services = [
         icon: ShoppingCart,
         color: "bg-emerald-50 text-emerald-600",
         gradient: "from-emerald-50 to-green-50",
-        border: "group-hover:border-emerald-200"
+        border: "group-hover:border-emerald-200",
+        href: "/services/ecommerce-development"
     },
     {
-        title: "Corporate Websites",
+        title: "Web Development",
         description: "Establish trust with a modern, professional website. Fast loading, SEO-optimized, and designed to generate leads for your business.",
         icon: Globe,
         color: "bg-indigo-50 text-indigo-600",
         gradient: "from-indigo-50 to-violet-50",
-        border: "group-hover:border-indigo-200"
+        border: "group-hover:border-indigo-200",
+        href: "/services/web-development"
     },
     {
-        title: "Web App Development",
+        title: "UI/UX Design",
         description: "Solve complex business problems with powerful web applications. Built on Next.js for speed, scalability, and performance.",
-        icon: LayoutGrid,
+        icon: LayoutGrid, // Using LayoutGrid for UI/UX
         color: "bg-blue-50 text-blue-600",
         gradient: "from-blue-50 to-indigo-50",
-        border: "group-hover:border-blue-200"
+        border: "group-hover:border-blue-200",
+        href: "/services/ui-ux-design"
     },
+    // Using existing icon logic but linking to new pages or keeping as is if no dedicated page yet
+    // AI & Automation -> Custom Software? Or new page? Request didn't explicitly ask for AI page but "Custom Software" 
+    // I will link AI to Custom Software for now, or just /#contact as fallback, but better to Custom Software
     {
         title: "AI & Automation",
         description: "Leverage the power of AI to automate workflows and enhance decision making. Custom integrations with LLMs and predictive models.",
         icon: Cpu,
         color: "bg-purple-50 text-purple-600",
         gradient: "from-purple-50 to-fuchsia-50",
-        border: "group-hover:border-purple-200"
+        border: "group-hover:border-purple-200",
+        href: "/services/custom-software"
     },
     {
         title: "Custom Software",
@@ -51,7 +59,8 @@ const services = [
         icon: Code2,
         color: "bg-rose-50 text-rose-600",
         gradient: "from-rose-50 to-pink-50",
-        border: "group-hover:border-rose-200"
+        border: "group-hover:border-rose-200",
+        href: "/services/custom-software"
     },
 ];
 
@@ -80,25 +89,27 @@ export function Services() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((service, index) => (
                         <FadeIn key={index} delay={index * 0.1}>
-                            <div
-                                className={`group relative h-full bg-white/60 backdrop-blur-lg rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-slate-100/50 hover:border-slate-200 ${service.border}`}
-                            >
-                                {/* Icon Container with Gradient */}
-                                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-sm ring-1 ring-white`}>
-                                    <service.icon className={`w-8 h-8 ${service.color.split(" ")[1]}`} />
-                                </div>
+                            <Link href={service.href} className="block h-full">
+                                <div
+                                    className={`group relative h-full bg-white/60 backdrop-blur-lg rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-slate-100/50 hover:border-slate-200 ${service.border}`}
+                                >
+                                    {/* Icon Container with Gradient */}
+                                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-sm ring-1 ring-white`}>
+                                        <service.icon className={`w-8 h-8 ${service.color.split(" ")[1]}`} />
+                                    </div>
 
-                                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                                    {service.title}
-                                </h3>
-                                <p className="text-slate-600 leading-relaxed mb-6">
-                                    {service.description}
-                                </p>
+                                    <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                                        {service.title}
+                                    </h3>
+                                    <p className="text-slate-600 leading-relaxed mb-6">
+                                        {service.description}
+                                    </p>
 
-                                <div className="flex items-center text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors mt-auto cursor-pointer">
-                                    Learn more <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                                    <div className="flex items-center text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors mt-auto cursor-pointer">
+                                        Learn more <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                                    </div>
                                 </div>
-                            </div>
+                            </Link>
                         </FadeIn>
                     ))}
                 </div>

@@ -11,12 +11,22 @@ import { Process } from "@/components/sections/it/Process";
 import { FAQ } from "@/components/sections/it/FAQ";
 
 export const metadata: Metadata = {
-  title: "Epsilon Technology | Premium IT Services & Mobile App Development",
-  description: "Epsilon Technology helps global businesses build scalable mobile apps, websites, and AI solutions. Expert IT services for innovative startups and enterprises.",
-  keywords: ["IT Services", "Mobile App Development Company", "Ecommerce Website Development", "Web App Development", "AI Mobile App Development", "React Native", "Next.js", "Global Clients", "US Startup Developer"],
+  title: "Epsilon Technology | Web Development Company USA, UK & UAE",
+  description: "Epsilon Technology provides premium web & mobile app development services for businesses in the USA, UK, UAE, and Canada. Hire expert developers today.",
+  keywords: [
+    "Web Development Company USA",
+    "Mobile App Development Services",
+    "Ecommerce Developers for Hire",
+    "Custom Software Development Agency UK",
+    "Mobile App Developers Canada",
+    "Web Development Company UAE",
+    "React Native Development",
+    "Next.js Experts",
+    "Global IT Services"
+  ],
   openGraph: {
-    title: "Epsilon Technology | Premium IT Services",
-    description: "Building scalable digital products for global businesses.",
+    title: "Epsilon Technology | Premium IT Services Globally",
+    description: "Building scalable digital products for businesses in USA, UK, UAE & Canada.",
     images: ["/logo.png"],
   }
 };

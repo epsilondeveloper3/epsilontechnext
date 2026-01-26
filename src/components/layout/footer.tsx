@@ -37,9 +37,10 @@ export function Footer() {
                     <div className="lg:col-span-2">
                         <h4 className="text-sm font-bold uppercase tracking-widest mb-8 text-slate-200">Services</h4>
                         <ul className="space-y-4 text-slate-400 text-sm">
-                            <li><Link href="/#services" className="hover:text-sky-400 transition-colors">Mobile Apps</Link></li>
-                            <li><Link href="/#services" className="hover:text-sky-400 transition-colors">Web Development</Link></li>
-                            <li><Link href="/#services" className="hover:text-sky-400 transition-colors">AI Solutions</Link></li>
+                            <li><Link href="/services/mobile-app-development" className="hover:text-sky-400 transition-colors">Mobile Apps</Link></li>
+                            <li><Link href="/services/web-development" className="hover:text-sky-400 transition-colors">Web Development</Link></li>
+                            <li><Link href="/services/ecommerce-development" className="hover:text-sky-400 transition-colors">eCommerce</Link></li>
+                            <li><Link href="/services/custom-software" className="hover:text-sky-400 transition-colors">Custom Software</Link></li>
                             <li><Link href="/digital-marketing" className="hover:text-sky-400 transition-colors">Digital Marketing</Link></li>
                         </ul>
                     </div>
@@ -51,7 +52,7 @@ export function Footer() {
                             <li><Link href="/about" className="hover:text-sky-400 transition-colors">About Us</Link></li>
                             <li><Link href="/#portfolio" className="hover:text-sky-400 transition-colors">Portfolio</Link></li>
                             <li><Link href="/blog" className="hover:text-sky-400 transition-colors">Blog & Insights</Link></li>
-                            <li><Link href="#" className="hover:text-sky-400 transition-colors cursor-not-allowed opacity-50">Careers (Hiring Soon)</Link></li>
+                            <li><Link href="/services/maintenance-support" className="hover:text-sky-400 transition-colors">Support</Link></li>
                         </ul>
                     </div>
 

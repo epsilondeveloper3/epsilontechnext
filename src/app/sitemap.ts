@@ -23,6 +23,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.8,
         },
         {
+            url: 'https://epsilon-technology.com/services/mobile-app-development',
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
+            url: 'https://epsilon-technology.com/services/web-development',
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
+            url: 'https://epsilon-technology.com/services/ecommerce-development',
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
+            url: 'https://epsilon-technology.com/services/custom-software',
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
+            url: 'https://epsilon-technology.com/services/ui-ux-design',
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
+            url: 'https://epsilon-technology.com/services/maintenance-support',
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
             url: 'https://epsilon-technology.com/digital-marketing-for-general-surgeons',
             lastModified: new Date(),
             changeFrequency: 'monthly',
@@ -132,12 +168,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
         {
             url: 'https://epsilon-technology.com/blog/mobile-app-development-guide-2026',
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.9,
-        },
-        {
-            url: 'https://epsilon-technology.com/services/mobile-app-development',
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.9,

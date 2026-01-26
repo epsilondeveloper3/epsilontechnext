@@ -5,23 +5,19 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-
-const navLinks = [
-    { name: 'Doctor Marketing', href: '#doctor-marketing' }, // Anchor for now or pages
-    { name: 'IT Services', href: '/it-services' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#contact' },
-];
 
 export function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
     const pathname = usePathname();
-    const isITServices = pathname === '/';
-    const isDoctorMarketing = pathname.startsWith('/digital-marketing') || pathname.startsWith('/doctor-marketing');
+    const isITServices = pathname === '/' || pathname.startsWith('/services');
+
+    // Determine header style based on page
+    // For now keeping it consistent with the original logic but defaulting to white/light theme
+    const isDarkHero = false;
 
     useEffect(() => {
         const handleScroll = () => {
@@ -31,29 +27,34 @@ export function Header() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Update nav links based on context
+    const services = [
+        { name: 'Web Development', href: '/services/web-development' },
+        { name: 'Mobile App Development', href: '/services/mobile-app-development' },
+        { name: 'eCommerce Development', href: '/services/ecommerce-development' },
+        { name: 'Custom Software', href: '/services/custom-software' },
+        { name: 'UI/UX Design', href: '/services/ui-ux-design' },
+        { name: 'Maintenance & Support', href: '/services/maintenance-support' },
+    ];
+
     const displayNavLinks = [
-        { name: 'IT Services', href: '/' },
+        {
+            name: 'Services',
+            href: '#',
+            isDropdown: true
+        },
         { name: 'Doctor Marketing', href: '/digital-marketing' },
         { name: 'Portfolio', href: '/#portfolio' },
-        { name: 'About', href: '/#about' },
+        { name: 'About', href: '/about' },
         { name: 'Contact', href: '/#contact' },
     ];
 
-    // IT Services page (Home) starts with correct contrast
-    // If we want a transparent header on home, keep logic. If white, remove.
-    // Assuming white bg for now as per my new components (Hero has white/light bg).
-    const isDarkHero = false; // Disable dark hero logic for now as new design is light/white based
-
-
     return (
         <header
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'
                 }`}
         >
             <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
                 <Link href="/" className="flex items-center gap-2">
-                    {/* Using the logo image */}
                     <div className="relative h-10 w-40 md:h-12 md:w-48">
                         <Image
                             src="/logo.png"
@@ -68,16 +69,48 @@ export function Header() {
                 {/* Desktop Nav */}
                 <nav className="hidden lg:flex items-center gap-8">
                     {displayNavLinks.map((link) => (
-                        <Link
-                            key={link.name}
-                            href={link.href}
-                            className={`font-medium transition-colors ${pathname === link.href
-                                ? (isDarkHero ? 'text-blue-400' : 'text-primary font-semibold')
-                                : (isDarkHero ? 'text-slate-200 hover:text-white' : 'text-slate-600 hover:text-primary')
-                                }`}
-                        >
-                            {link.name}
-                        </Link>
+                        <div key={link.name} className="relative group">
+                            {link.isDropdown ? (
+                                <button
+                                    className={`flex items-center gap-1 font-medium transition-colors ${isDarkHero ? 'text-slate-200 hover:text-white' : 'text-slate-600 hover:text-primary'
+                                        }`}
+                                    onMouseEnter={() => setServicesDropdownOpen(true)}
+                                // onMouseLeave is handled by the parent div usually, or we can use CSS hover group
+                                >
+                                    {link.name}
+                                    <ChevronDown size={14} />
+                                </button>
+                            ) : (
+                                <Link
+                                    href={link.href}
+                                    className={`font-medium transition-colors ${pathname === link.href
+                                        ? (isDarkHero ? 'text-blue-400' : 'text-primary font-semibold')
+                                        : (isDarkHero ? 'text-slate-200 hover:text-white' : 'text-slate-600 hover:text-primary')
+                                        }`}
+                                >
+                                    {link.name}
+                                </Link>
+                            )}
+
+                            {/* Dropdown Menu */}
+                            {link.isDropdown && (
+                                <div
+                                    className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-slate-100 overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left"
+                                >
+                                    <div className="py-2">
+                                        {services.map((service) => (
+                                            <Link
+                                                key={service.name}
+                                                href={service.href}
+                                                className="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-600 transition-colors"
+                                            >
+                                                {service.name}
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+                        </div>
                     ))}
                     <Button
                         size="sm"
@@ -104,18 +137,39 @@ export function Header() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="lg:hidden bg-white border-t border-slate-100 overflow-hidden"
+                        className="lg:hidden bg-white border-t border-slate-100 overflow-hidden max-h-[90vh] overflow-y-auto"
                     >
                         <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
                             {displayNavLinks.map((link) => (
-                                <Link
-                                    key={link.name}
-                                    href={link.href}
-                                    className="text-lg font-medium text-slate-800 py-2 border-b border-slate-50"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                >
-                                    {link.name}
-                                </Link>
+                                <div key={link.name}>
+                                    {link.isDropdown ? (
+                                        <div className="flex flex-col gap-2">
+                                            <div className="text-lg font-medium text-slate-800 py-2 border-b border-slate-50 opacity-70">
+                                                {link.name}
+                                            </div>
+                                            <div className="pl-4 flex flex-col gap-2 border-l-2 border-slate-100 ml-1">
+                                                {services.map((service) => (
+                                                    <Link
+                                                        key={service.name}
+                                                        href={service.href}
+                                                        className="text-base font-medium text-slate-600 py-2"
+                                                        onClick={() => setMobileMenuOpen(false)}
+                                                    >
+                                                        {service.name}
+                                                    </Link>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    ) : (
+                                        <Link
+                                            href={link.href}
+                                            className="text-lg font-medium text-slate-800 py-2 border-b border-slate-50"
+                                            onClick={() => setMobileMenuOpen(false)}
+                                        >
+                                            {link.name}
+                                        </Link>
+                                    )}
+                                </div>
                             ))}
                             <Button className="w-full mt-4" onClick={() => {
                                 setMobileMenuOpen(false);

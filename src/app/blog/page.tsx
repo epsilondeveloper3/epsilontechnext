@@ -4,15 +4,36 @@ import Image from 'next/image';
 import { ArrowRight, Calendar, User } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: "Blog | Doctor Marketing Insights & Tips | Epsilon Technology",
-    description: "Read our latest articles on doctor marketing, healthcare SEO, and patient acquisition strategies for clinics in India.",
+    title: "Blog | Web, App Development & Doctor Marketing Insights | Epsilon",
+    description: "Expert insights on mobile app development trends, custom software solutions, eCommerce growth, and specific digital marketing strategies for doctors.",
+    keywords: ["web development trends 2026", "mobile app development guide", "ecommerce growth strategies", "doctor marketing blog", "tech industry insights"],
     openGraph: {
-        title: "Epsilon Technology Blog",
-        description: "Expert insights on growing your medical practice.",
+        title: "Epsilon Technology Blog | Tech & Marketing Insights",
+        description: "Stay ahead with expert articles on technology and healthcare marketing.",
     }
 };
 
 const posts = [
+    {
+        title: "Web and App Development Trends in 2026: USA tech Industry",
+        excerpt: "Explore the latest technologies shaping the web and mobile app landscape in the US market, from AI integration to PWA dominance.",
+        date: "Jan 28, 2026",
+        author: "Jaydeep Kataria",
+        slug: "web-app-development-trends-usa-2026",
+        category: "Tech Trends",
+        image: "/blog_mobile_app_dev.png",
+        isExternal: false
+    },
+    {
+        title: "Solving Business Pain Points Through Custom Software Solutions",
+        excerpt: "How tailored software can eliminate inefficiencies, automate workflows, and drive ROI for your business.",
+        date: "Jan 27, 2026",
+        author: "Jaydeep Kataria",
+        slug: "business-solutions-through-technology",
+        category: "Business Growth",
+        image: "/blog_mobile_app_dev.png",
+        isExternal: false
+    },
     {
         title: "How to Build a Scalable Mobile App in 2026: A Startup Founder's Guide",
         excerpt: "A comprehensive guide for startups on building successful mobile apps. Learn about tech stacks, React Native vs Native, and costs.",
@@ -20,6 +41,26 @@ const posts = [
         author: "Jaydeep Kataria",
         slug: "mobile-app-development-guide-2026",
         category: "App Development",
+        image: "/blog_mobile_app_dev.png",
+        isExternal: false
+    },
+    {
+        title: "eCommerce Growth Strategies for 2026: Beyond Basic Stores",
+        excerpt: "Maximize your online sales with advanced eCommerce strategies, including personalized shopping experiences and omnichannel retail.",
+        date: "Jan 25, 2026",
+        author: "Jaydeep Kataria",
+        slug: "ecommerce-growth-strategies-2026",
+        category: "eCommerce",
+        image: "/blog_mobile_app_dev.png",
+        isExternal: false
+    },
+    {
+        title: "The Ultimate Guide to Digital Transformation",
+        excerpt: "A step-by-step guide to digitizing your business operations and staying competitive in a digital-first world.",
+        date: "Jan 25, 2026",
+        author: "Jaydeep Kataria",
+        slug: "digital-transformation-guide",
+        category: "Digital Transformation",
         image: "/blog_mobile_app_dev.png",
         isExternal: false
     },
@@ -152,7 +193,6 @@ const posts = [
         category: "Local SEO",
         image: "/blog_medical_marketing.png"
     },
-    // Future posts can be added here
 ];
 
 export default function BlogIndex() {

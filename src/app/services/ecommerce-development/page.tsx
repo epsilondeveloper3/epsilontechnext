@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { getButtonClasses } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2, Smartphone, Tablet, Layers, Zap, PenTool } from "lucide-react";
+import { ShoppingCart, CreditCard, ShieldCheck, BarChart3, Globe, Truck } from "lucide-react";
 import Image from "next/image";
 import Link from 'next/link';
 
@@ -19,109 +19,105 @@ import {
 } from "@/components/ui/accordion";
 
 export const metadata: Metadata = {
-    title: "Mobile App Development Services Canada & USA | React Native Experts",
-    description: "Top-rated mobile app development company serving Canada, USA, & UK. We build high-performance iOS and Android apps using React Native and Flutter.",
-    keywords: ["mobile app developers Canada", "custom app development services", "React Native developers", "iOS app development", "Android app development agency"],
+    title: "eCommerce Developers for Hire | Online Store Development",
+    description: "Expert eCommerce development services. We build high-converting online stores using Shopify, WooCommerce, and custom Next.js solutions.",
+    keywords: ["ecommerce developers for hire", "ecommerce website development", "Shopify experts", "custom ecommerce solutions", "online store builders"],
     openGraph: {
-        title: "Mobile App Development Services | Epsilon Technology",
-        description: "We build scalable, high-performance mobile apps for startups and enterprises.",
+        title: "eCommerce Development Services | Epsilon Technology",
+        description: "Scale your online business with our robust ecommerce solutions.",
     }
 };
 
 const serviceHighlights = [
     {
-        title: "iOS Application Development",
-        description: "Native and cross-platform iOS apps designed for the Apple ecosystem.",
-        icon: Smartphone
+        title: "Custom Storefront Design",
+        description: "Unique, brand-centric designs that differentiate you from competitors.",
+        icon: ShoppingCart
     },
     {
-        title: "Android Application Development",
-        description: "Scalable Android apps that perform flawlessly across thousands of devices.",
-        icon: Smartphone
+        title: "Platform Migration",
+        description: "Seamlessly move your store to Shopify, WooCommerce, or a custom stack.",
+        icon: Globe
     },
     {
-        title: "Cross-Platform (React Native)",
-        description: "Code once, deploy everywhere. Save time and money with React Native.",
-        icon: Layers
+        title: "Payment Gateway Integration",
+        description: "Secure integration with Stripe, PayPal, Razorpay, and more.",
+        icon: CreditCard
     },
     {
-        title: "UI/UX for Mobile",
-        description: "Intuitive mobile designs that reduce friction and increase user retention.",
-        icon: PenTool
+        title: "Inventory Management",
+        description: "Automated systems to track stock levels and manage orders efficiently.",
+        icon: Truck
     },
     {
-        title: "App Maintenance",
-        description: "Regular updates, bug fixes, and performance monitoring for your live apps.",
-        icon: Zap
+        title: "Speed Optimization",
+        description: "Faster load times mean higher conversion rates. We optimize every pixel.",
+        icon: BarChart3
     },
     {
-        title: "Enterprise Mobility",
-        description: "Secure mobile solutions to empower your workforce and streamline operations.",
-        icon: Tablet
+        title: "Security & Compliance",
+        description: "SSL, PCI compliance, and data protection to keep your customers safe.",
+        icon: ShieldCheck
     }
 ];
 
 const faqs = [
     {
-        question: "How much does it cost to build a mobile app?",
-        answer: "A simple MVP usually starts around $5k-$10k. More complex apps with custom backends and advanced features can range from $15k to $50k+. We provide detailed quotes."
+        question: "Which platform is best for my store?",
+        answer: "It depends. For quick setups, Shopify is great. For full control and scale, a custom Next.js solution is superior. We help you choose based on your specific needs."
     },
     {
-        question: "Do you develop for both iOS and Android?",
-        answer: "Yes! We specialize in React Native, which allows us to build for both iOS and Android simultaneously, saving you up to 40% in development costs."
+        question: "Can you integrate with my ERP/CRM?",
+        answer: "Yes, we build custom APIs to connect your online store with your existing ERP, CRM (like Salesforce or HubSpot), and inventory systems."
     },
     {
-        question: "How long does app development take?",
-        answer: "Typically 3-6 months depending on complexity. A basic MVP can sometimes be launched in 8-12 weeks."
+        question: "Is the store mobile-friendly?",
+        answer: "Absolutely. We follow a mobile-first approach, ensuring your store works perfectly on smartphones where most shopping happens."
     },
     {
-        question: "Will you help upload the app to the App Store?",
-        answer: "Yes, we handle the entire submission process for both the Apple App Store and Google Play Store, ensuring compliance with their guidelines."
-    },
-    {
-        question: "Who owns the code?",
-        answer: "You do. Once the project is fully paid for, you own 100% of the source code and intellectual property."
+        question: "How do you handle payments?",
+        answer: "We integrate trusted third-party gateways like Stripe and PayPal. We ensure all transactions are encrypted and secure."
     }
 ];
 
-export default function MobileAppServices() {
+export default function EcommerceDevelopment() {
     return (
         <main className="bg-white">
             {/* 1. Hero Section */}
             <section className="relative pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-50">
                 <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-                    <div className="absolute top-[20%] left-[10%] w-[30%] h-[30%] bg-sky-100 rounded-full blur-[100px] opacity-50" />
+                    <div className="absolute top-[20%] right-[10%] w-[30%] h-[30%] bg-emerald-100 rounded-full blur-[100px] opacity-50" />
                 </div>
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-16">
                         <div className="lg:w-1/2">
                             <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 mb-6">
-                                Custom Mobile App Development
-                                <span className="block text-sky-600">for Startups & Enterprises</span>
+                                eCommerce Development
+                                <span className="block text-emerald-600">That Converts</span>
                             </h1>
                             <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                                We help businesses in Canada, USA, and UK launch high-performance apps. From idea to App Store, our expert team builds scalable iOS and Android solutions.
+                                Hire top eCommerce developers to build your online store. Whether it's Shopify, WooCommerce, or a custom Next.js solution, we help you sell more online globally.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Link
                                     href="#contact"
-                                    className={getButtonClasses({ variant: 'primary', size: 'lg', className: 'bg-sky-600 hover:bg-sky-700 hover:shadow-sky-200' })}
+                                    className={getButtonClasses({ variant: 'primary', size: 'lg', className: 'bg-emerald-600 hover:bg-emerald-700 hover:shadow-emerald-200' })}
                                 >
-                                    Start Your Project
+                                    Build Your Store
                                 </Link>
                                 <Link
                                     href="#portfolio"
                                     className={getButtonClasses({ variant: 'outline', size: 'lg' })}
                                 >
-                                    View Portfolio
+                                    See Case Studies
                                 </Link>
                             </div>
                         </div>
                         <div className="lg:w-1/2">
                             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-white p-2">
                                 <Image
-                                    src="/blog_mobile_app_dev.png"
-                                    alt="Mobile App Development"
+                                    src="/blog_mobile_app_dev.png" // Placeholder
+                                    alt="eCommerce Development"
                                     width={600}
                                     height={400}
                                     className="rounded-xl w-full h-auto"
@@ -132,18 +128,18 @@ export default function MobileAppServices() {
                 </div>
             </section>
 
-            {/* 2. Pain Point + Solution Section */}
+            {/* 2. Pain Point + Solution */}
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="bg-red-50 p-8 rounded-3xl border border-red-100">
-                            <h3 className="text-2xl font-bold text-red-900 mb-6">Why Many Apps Fail</h3>
+                            <h3 className="text-2xl font-bold text-red-900 mb-6">Why Stores Lose Sales</h3>
                             <ul className="space-y-4">
                                 {[
-                                    "Glitchy performance leading to uninstalls",
-                                    "Poor UI/UX confusing users",
-                                    "Development taking too long and over budget",
-                                    "Lack of support after launch"
+                                    "Slow page load times increasing bounce rate",
+                                    "Complicated checkout process causing abandonment",
+                                    "Poor mobile design frustrating users",
+                                    "Security warnings scaring customers away"
                                 ].map((item, i) => (
                                     <li key={i} className="flex items-start gap-3 text-red-700">
                                         <div className="mt-1 w-5 h-5 rounded-full bg-red-200 flex items-center justify-center shrink-0">
@@ -154,17 +150,17 @@ export default function MobileAppServices() {
                                 ))}
                             </ul>
                         </div>
-                        <div className="bg-sky-50 p-8 rounded-3xl border border-sky-100">
-                            <h3 className="text-2xl font-bold text-sky-900 mb-6">The Epsilon Advantage</h3>
+                        <div className="bg-emerald-50 p-8 rounded-3xl border border-emerald-100">
+                            <h3 className="text-2xl font-bold text-emerald-900 mb-6">Our Conversion Focus</h3>
                             <ul className="space-y-4">
                                 {[
-                                    "Native-like performance with React Native",
-                                    "Award-winning UI/UX design teams",
-                                    "Agile delivery ensuring on-time launch",
-                                    "3 months free bug-fix support"
+                                    "Sub-second load times for instant browsing",
+                                    "Streamlined one-page checkouts",
+                                    "Responsive design that works on any device",
+                                    "Bank-grade security implementation"
                                 ].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3 text-sky-700">
-                                        <CheckCircle2 className="w-5 h-5 text-sky-600 shrink-0 mt-1" />
+                                    <li key={i} className="flex items-start gap-3 text-emerald-700">
+                                        <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0 mt-1" />
                                         {item}
                                     </li>
                                 ))}
@@ -174,18 +170,18 @@ export default function MobileAppServices() {
                 </div>
             </section>
 
-            {/* 3. Our Service Overview */}
+            {/* 3. Service Overview */}
             <section className="py-24 bg-slate-50">
                 <div className="container mx-auto px-4">
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <h2 className="text-3xl font-bold text-slate-900 mb-4">Complete Mobile Solutions</h2>
-                        <p className="text-slate-600">We handle everything from strategy to submission.</p>
+                        <h2 className="text-3xl font-bold text-slate-900 mb-4">Complete eCommerce Ecosystem</h2>
+                        <p className="text-slate-600">We build more than just websites; we build sales engines.</p>
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {serviceHighlights.map((feature, index) => (
                             <div key={index} className="p-8 rounded-2xl bg-white border border-slate-200 hover:shadow-xl transition-all hover:-translate-y-1">
-                                <div className="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center text-sky-600 mb-6">
+                                <div className="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-600 mb-6">
                                     <feature.icon size={24} />
                                 </div>
                                 <h3 className="text-xl font-bold text-slate-900 mb-3">{feature.title}</h3>
@@ -196,18 +192,18 @@ export default function MobileAppServices() {
                 </div>
             </section>
 
-            {/* 4. Technology Stack */}
+            {/* 4. Tech Stack */}
             <div className="bg-white">
                 <TechStack />
             </div>
 
-            {/* 5. Development Process */}
+            {/* 5. Process */}
             <Process />
 
             {/* 6. Why Choose Us */}
             <WhyChooseUs />
 
-            {/* 7. Case Studies / Work Samples */}
+            {/* 7. Portfolio */}
             <div id="portfolio">
                 <Portfolio />
             </div>
@@ -215,22 +211,22 @@ export default function MobileAppServices() {
             {/* 8. Testimonials */}
             <Testimonials />
 
-            {/* 9. FAQ Section */}
+            {/* 9. FAQ */}
             <section className="py-24 bg-slate-50">
                 <div className="container mx-auto px-4 max-w-3xl">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl mb-4">
-                            Frequently Asked Questions
+                            eCommerce FAQ
                         </h2>
                         <p className="text-lg text-slate-600">
-                            Common questions about mobile app development.
+                            Answers to common questions about selling online.
                         </p>
                     </div>
 
                     <Accordion type="single" collapsible className="w-full space-y-4">
                         {faqs.map((faq, index) => (
-                            <AccordionItem key={index} value={`item-${index}`} className="bg-white px-6 rounded-xl border border-slate-200 data-[state=open]:border-sky-200 transition-all">
-                                <AccordionTrigger className="text-left font-semibold text-slate-900 hover:text-sky-600 hover:no-underline py-6 text-lg">
+                            <AccordionItem key={index} value={`item-${index}`} className="bg-white px-6 rounded-xl border border-slate-200 data-[state=open]:border-emerald-200 transition-all">
+                                <AccordionTrigger className="text-left font-semibold text-slate-900 hover:text-emerald-600 hover:no-underline py-6 text-lg">
                                     {faq.question}
                                 </AccordionTrigger>
                                 <AccordionContent className="text-slate-600 leading-relaxed pb-6 text-base">
@@ -242,26 +238,26 @@ export default function MobileAppServices() {
                 </div>
             </section>
 
-            {/* 10. CTA Section */}
-            <section id="contact" className="py-24 bg-sky-600 relative overflow-hidden">
+            {/* 10. CTA */}
+            <section id="contact" className="py-24 bg-emerald-600 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
                 <div className="container mx-auto px-4 text-center relative z-10">
-                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Have an App Idea?</h2>
-                    <p className="text-sky-100 text-lg mb-10 max-w-2xl mx-auto">
-                        Let's turn your concept into a tangible, profitable product. Book a discovery call today.
+                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Ready to Sell More?</h2>
+                    <p className="text-emerald-100 text-lg mb-10 max-w-2xl mx-auto">
+                        Join hundreds of successful merchants powered by Epsilon Technology.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link
                             href="#contact"
-                            className={getButtonClasses({ variant: 'secondary', size: 'lg', className: 'bg-white text-sky-600 hover:bg-slate-100 hover:shadow-none' })}
+                            className={getButtonClasses({ variant: 'secondary', size: 'lg', className: 'bg-white text-emerald-600 hover:bg-slate-100 hover:shadow-none' })}
                         >
-                            Book Free Strategy Call
+                            Book a Consultation
                         </Link>
                         <Link
                             href="#contact"
-                            className={getButtonClasses({ variant: 'outline', size: 'lg', className: 'border-sky-400 text-white hover:bg-sky-700' })}
+                            className={getButtonClasses({ variant: 'outline', size: 'lg', className: 'border-emerald-400 text-white hover:bg-emerald-700' })}
                         >
-                            Request a Quote
+                            Request Quote
                         </Link>
                     </div>
                 </div>
