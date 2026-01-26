@@ -6,11 +6,11 @@ import { CheckCircle2, Instagram, Linkedin } from 'lucide-react';
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://epsilon-technology.com'),
-    title: "About Jaydeep Kataria | Epsilon Technology Founder",
-    description: "Meet Jaydeep Kataria, the founder of Epsilon Technology. A specialized doctor marketing expert in Gujarat helping clinics grow with digital strategies (2025-26).",
+    title: "About Jaydeep Kataria | Full-Stack Developer & Tech Founder",
+    description: "Meet Jaydeep Kataria, Founder of Epsilon Technology. Expert in Full-Stack Development (Next.js, Node.js), Mobile Apps, and Scalable Digital Solutions.",
     openGraph: {
-        title: "About Jaydeep Kataria | Doctor Marketing Expert",
-        description: "Helping doctors in Gujarat grow their practice since 2024.",
+        title: "About Jaydeep Kataria | Lead Technologist & Founder",
+        description: "Building scalable digital products and IT solutions for global businesses.",
         images: ["/images/jayde.png"],
         type: 'profile',
     }
