@@ -5,8 +5,9 @@ import { Button } from '@/components/ui/button';
 import { CheckCircle2, Dribbble, Instagram, Linkedin } from 'lucide-react';
 
 export const metadata: Metadata = {
+    metadataBase: new URL('https://epsilon-technology.com'),
     title: "About Jaydeep Kataria | Epsilon Technology Founder",
-    description: "Meet Jaydeep Kataria, the founder of Epsilon Technology. A specialized doctor marketing expert in Gujarat helping clinics grow with digital strategies.",
+    description: "Meet Jaydeep Kataria, the founder of Epsilon Technology. A specialized doctor marketing expert in Gujarat helping clinics grow with digital strategies (2025-26).",
     openGraph: {
         title: "About Jaydeep Kataria | Doctor Marketing Expert",
         description: "Helping doctors in Gujarat grow their practice since 2024.",

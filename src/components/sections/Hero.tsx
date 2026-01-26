@@ -29,7 +29,7 @@ export function Hero() {
                     transition={{ duration: 0.5, delay: 0.1 }}
                     className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-6 leading-[1.1]"
                 >
-                    Turn Instagram Into a <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Patient Acquisition Machine</span> for Your Clinic
+                    Turn Instagram Into a <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-500">Patient Acquisition Machine</span> for Your Clinic
                 </motion.h1>
 
                 <motion.p
