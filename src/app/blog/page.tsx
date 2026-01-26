@@ -14,12 +14,23 @@ export const metadata: Metadata = {
 
 const posts = [
     {
+        title: "How to Build a Scalable Mobile App in 2026: A Startup Founder's Guide",
+        excerpt: "A comprehensive guide for startups on building successful mobile apps. Learn about tech stacks, React Native vs Native, and costs.",
+        date: "Jan 26, 2026",
+        author: "Jaydeep Kataria",
+        slug: "mobile-app-development-guide-2026",
+        category: "App Development",
+        image: "/blog_mobile_app_dev.png",
+        isExternal: false
+    },
+    {
         title: "Digital Marketing for General Surgeons: The Authority Guide",
         excerpt: "Learn how general surgeons can build deep clinical authority, dominate high-intent search, and provide digital reassurance.",
         date: "Jan 23, 2026",
         author: "Jaydeep Kataria",
         slug: "digital-marketing-for-general-surgeons",
         category: "Surgical",
+        image: "/blog_medical_marketing.png",
         isExternal: true
     },
     {
@@ -29,6 +40,7 @@ const posts = [
         author: "Jaydeep Kataria",
         slug: "digital-marketing-for-spine-specialists",
         category: "Spine Care",
+        image: "/blog_medical_marketing.png",
         isExternal: true
     },
     {
@@ -38,6 +50,7 @@ const posts = [
         author: "Jaydeep Kataria",
         slug: "digital-marketing-for-ayurvedic-doctors",
         category: "Holistic",
+        image: "/blog_medical_marketing.png",
         isExternal: true
     },
     {
@@ -47,6 +60,7 @@ const posts = [
         author: "Jaydeep Kataria",
         slug: "digital-marketing-for-dermatologists",
         category: "Aesthetic",
+        image: "/blog_medical_marketing.png",
         isExternal: true
     },
     {
@@ -56,6 +70,7 @@ const posts = [
         author: "Jaydeep Kataria",
         slug: "digital-marketing-for-surgeon-doctors",
         category: "Surgical",
+        image: "/blog_medical_marketing.png",
         isExternal: true
     },
     {
@@ -65,6 +80,7 @@ const posts = [
         author: "Jaydeep Kataria",
         slug: "digital-marketing-for-pediatric-doctors",
         category: "Pediatric",
+        image: "/blog_medical_marketing.png",
         isExternal: true
     },
     {
@@ -74,6 +90,7 @@ const posts = [
         author: "Jaydeep Kataria",
         slug: "digital-marketing-for-gynecologist-doctors",
         category: "Women's Health",
+        image: "/blog_medical_marketing.png",
         isExternal: true
     },
     {
@@ -83,6 +100,7 @@ const posts = [
         author: "Jaydeep Kataria",
         slug: "digital-marketing-for-dental-doctors",
         category: "Dental",
+        image: "/blog_medical_marketing.png",
         isExternal: true
     },
     {
@@ -92,6 +110,7 @@ const posts = [
         author: "Jaydeep Kataria",
         slug: "digital-marketing-for-ivf-doctors",
         category: "Fertility",
+        image: "/blog_medical_marketing.png",
         isExternal: true
     },
     {
@@ -101,6 +120,7 @@ const posts = [
         author: "Jaydeep Kataria",
         slug: "digital-marketing-for-orthopedic-doctors",
         category: "Specialized",
+        image: "/blog_medical_marketing.png",
         isExternal: true
     },
     {
@@ -110,6 +130,7 @@ const posts = [
         author: "Jaydeep Kataria",
         slug: "digital-marketing-for-doctors-in-junagadh",
         category: "Local Guide",
+        image: "/blog_medical_marketing.png",
         isExternal: true
     },
     {
@@ -119,7 +140,8 @@ const posts = [
         author: "Jaydeep Kataria",
         slug: "digital-marketing-for-doctors",
         category: "Educational",
-        isExternal: true // Custom flag to handle different path structure if needed
+        image: "/blog_medical_marketing.png",
+        isExternal: true
     },
     {
         title: "7 Proven Marketing Ideas for Doctors in Junagadh (2025 Guide)",
@@ -127,7 +149,8 @@ const posts = [
         date: "Jan 15, 2026",
         author: "Jaydeep Kataria",
         slug: "doctor-marketing-ideas-junagadh",
-        category: "Local SEO"
+        category: "Local SEO",
+        image: "/blog_medical_marketing.png"
     },
     // Future posts can be added here
 ];
@@ -155,9 +178,12 @@ export default function BlogIndex() {
                             <article className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-slate-100 h-full flex flex-col">
                                 <div className="h-48 bg-blue-100 relative overflow-hidden">
                                     {/* Placeholder for blog image */}
-                                    <div className="absolute inset-0 flex items-center justify-center text-blue-300">
-                                        Blog Image
-                                    </div>
+                                    <Image
+                                        src={post.image || "/blog_medical_marketing.png"}
+                                        alt={post.title}
+                                        fill
+                                        className="object-cover group-hover:scale-110 transition-transform duration-700"
+                                    />
                                 </div>
                                 <div className="p-6 flex flex-col flex-grow">
                                     <div className="flex items-center gap-4 text-xs text-slate-500 mb-4">

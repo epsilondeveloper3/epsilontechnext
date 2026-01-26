@@ -51,7 +51,7 @@ export function Hero() {
                         Book Free Doctor Growth Call
                         <ArrowRight className="ml-2 w-5 h-5" />
                     </Button>
-                    <Button size="xl" variant="outline" className="gap-2" onClick={() => window.open('https://wa.me/917359315576', '_blank')}>
+                    <Button size="xl" variant="outline" className="gap-2" onClick={() => window.open('https://wa.me/919106698776', '_blank')}>
                         <MessageCircle className="w-5 h-5 text-green-600" />
                         WhatsApp Us Now
                     </Button>

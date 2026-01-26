@@ -88,24 +88,45 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Epsilon Technology",
-              "url": "https://epsilon-technology.com",
-              "logo": "https://epsilon-technology.com/logo.png",
-              "description": "Specialized social media growth for doctors and premium IT software services.",
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "email": "jaydeep@epsilon-technology.com",
-                "contactType": "customer service"
-              },
-              "sameAs": [
-                "https://www.instagram.com/epsilon.technology/"
-              ],
-              "founder": {
-                "@type": "Person",
-                "name": "Jaydeep Kataria",
-                "url": "https://epsilon-technology.com/about"
-              }
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://epsilon-technology.com/#organization",
+                  "name": "Epsilon Technology",
+                  "url": "https://epsilon-technology.com",
+                  "logo": "https://epsilon-technology.com/logo.png",
+                  "description": "Specialized social media growth for doctors and premium IT software services.",
+                  "contactPoint": {
+                    "@type": "ContactPoint",
+                    "email": "jaydeep@epsilon-technology.com",
+                    "contactType": "customer service"
+                  },
+                  "sameAs": [
+                    "https://www.instagram.com/epsilon.technology/",
+                    "https://dribbble.com/epsilontech"
+                  ],
+                  "founder": {
+                    "@type": "Person",
+                    "name": "Jaydeep Kataria",
+                    "url": "https://epsilon-technology.com/about"
+                  }
+                },
+                {
+                  "@type": "SoftwareHouse",
+                  "@id": "https://epsilon-technology.com/#software",
+                  "name": "Epsilon Technology - IT Services",
+                  "parentOrganization": {
+                    "@id": "https://epsilon-technology.com/#organization"
+                  },
+                  "description": "Global mobile app development, ecommerce solutions, and custom software company.",
+                  "url": "https://epsilon-technology.com",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressCountry": "IN"
+                  },
+                  "priceRange": "$$$"
+                }
+              ]
             })
           }}
         />

@@ -18,7 +18,7 @@ export function Footer() {
                             />
                         </div>
                         <p className="text-slate-400 text-lg leading-relaxed mb-8 max-w-sm">
-                            We bridge the gap between healthcare and digital growth. Specialized marketing for doctors who want to lead.
+                            Leading IT services company providing scalable digital products and specialized marketing for healthcare professionals.
                         </p>
                         <div className="flex gap-4">
                             <Link href="https://www.instagram.com/epsilontechnology/" target="_blank" className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all">
@@ -37,27 +37,27 @@ export function Footer() {
                     <div className="lg:col-span-2">
                         <h4 className="text-sm font-bold uppercase tracking-widest mb-8 text-slate-200">Services</h4>
                         <ul className="space-y-4 text-slate-400 text-sm">
-                            <li><Link href="/" className="hover:text-blue-400 transition-colors">Doctor Marketing</Link></li>
-                            <li><Link href="/it-services" className="hover:text-blue-400 transition-colors">IT Solutions</Link></li>
-                            <li><Link href="/it-services#services" className="hover:text-blue-400 transition-colors">App Development</Link></li>
-                            <li><Link href="/it-services#services" className="hover:text-blue-400 transition-colors">Web Systems</Link></li>
+                            <li><Link href="/#services" className="hover:text-sky-400 transition-colors">Mobile Apps</Link></li>
+                            <li><Link href="/#services" className="hover:text-sky-400 transition-colors">Web Development</Link></li>
+                            <li><Link href="/#services" className="hover:text-sky-400 transition-colors">AI Solutions</Link></li>
+                            <li><Link href="/digital-marketing" className="hover:text-sky-400 transition-colors">Digital Marketing</Link></li>
                         </ul>
                     </div>
 
-                    {/* Locations */}
+                    {/* Company */}
                     <div className="lg:col-span-3">
-                        <h4 className="text-sm font-bold uppercase tracking-widest mb-8 text-slate-200">Our Reach</h4>
+                        <h4 className="text-sm font-bold uppercase tracking-widest mb-8 text-slate-200">Company</h4>
                         <ul className="space-y-4 text-slate-400 text-sm">
-                            <li><Link href="/doctor-marketing-in-junagadh" className="hover:text-blue-400 transition-colors">Marketing in Junagadh</Link></li>
-                            <li><Link href="/doctor-marketing-in-rajkot" className="hover:text-blue-400 transition-colors">Marketing in Rajkot</Link></li>
-                            <li><Link href="/doctor-marketing-in-morbi" className="hover:text-blue-400 transition-colors">Marketing in Morbi</Link></li>
-                            <li><Link href="/digital-marketing-in-junagadh" className="hover:text-blue-400 transition-colors">Digital Agency Junagadh</Link></li>
+                            <li><Link href="/about" className="hover:text-sky-400 transition-colors">About Us</Link></li>
+                            <li><Link href="/#portfolio" className="hover:text-sky-400 transition-colors">Portfolio</Link></li>
+                            <li><Link href="/blog" className="hover:text-sky-400 transition-colors">Blog & Insights</Link></li>
+                            <li><Link href="#" className="hover:text-sky-400 transition-colors cursor-not-allowed opacity-50">Careers (Hiring Soon)</Link></li>
                         </ul>
                     </div>
 
-                    {/* Contact */}
+                    {/* Contact - Updated Title */}
                     <div className="lg:col-span-3">
-                        <h4 className="text-sm font-bold uppercase tracking-widest mb-8 text-slate-200">Get in Touch</h4>
+                        <h4 className="text-sm font-bold uppercase tracking-widest mb-8 text-slate-200">Global HQ</h4>
                         <div className="space-y-6 text-slate-400 text-sm">
                             <div className="flex items-start gap-3">
                                 <MapPin size={18} className="text-blue-500 shrink-0 mt-0.5" />
@@ -69,7 +69,7 @@ export function Footer() {
                             </div>
                             <div className="flex items-center gap-3">
                                 <Phone size={18} className="text-blue-500 shrink-0" />
-                                <a href="tel:+917359315576" className="hover:text-white transition-colors">+91 73593 15576</a>
+                                <a href="tel:+919106698776" className="hover:text-white transition-colors">+91 91066 98776</a>
                             </div>
                         </div>
                     </div>

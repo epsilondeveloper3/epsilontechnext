@@ -20,7 +20,8 @@ export function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const pathname = usePathname();
-    const isITServices = pathname === '/it-services';
+    const isITServices = pathname === '/';
+    const isDoctorMarketing = pathname.startsWith('/digital-marketing') || pathname.startsWith('/doctor-marketing');
 
     useEffect(() => {
         const handleScroll = () => {
@@ -30,17 +31,20 @@ export function Header() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Update nav links based on context if needed, but fixed paths work best
+    // Update nav links based on context
     const displayNavLinks = [
-        { name: 'Doctor Marketing', href: '/' }, // Always go to home
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Portfolio', href: '#portfolio' },
-        { name: 'About', href: '#about' }, // Maps to 'Why Work With Us' on IT page
-        { name: 'Contact', href: '#contact' }, // Maps to 'Client CTA' on IT page
+        { name: 'IT Services', href: '/' },
+        { name: 'Doctor Marketing', href: '/digital-marketing' },
+        { name: 'Portfolio', href: '/#portfolio' },
+        { name: 'About', href: '/#about' },
+        { name: 'Contact', href: '/#contact' },
     ];
 
-    // IT Services page starts, so we need white text initially
-    const isDarkHero = isITServices && !isScrolled;
+    // IT Services page (Home) starts with correct contrast
+    // If we want a transparent header on home, keep logic. If white, remove.
+    // Assuming white bg for now as per my new components (Hero has white/light bg).
+    const isDarkHero = false; // Disable dark hero logic for now as new design is light/white based
+
 
     return (
         <header
