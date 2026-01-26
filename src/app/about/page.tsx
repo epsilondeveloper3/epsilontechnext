@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { CheckCircle2, Dribbble, Instagram, Linkedin } from 'lucide-react';
+import { CheckCircle2, Instagram, Linkedin } from 'lucide-react';
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://epsilon-technology.com'),
@@ -24,27 +24,27 @@ export default function AboutPage() {
                 <div className="flex flex-col md:flex-row items-center gap-12 max-w-6xl mx-auto">
                     <div className="flex-1 order-2 md:order-1">
                         <div className="inline-block bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-bold mb-6">
-                            Founder & Lead Strategist
+                            Founder & Lead Technologist
                         </div>
                         <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
                             Hi, I'm <span className="text-blue-600">Jaydeep Kataria.</span>
                         </h1>
                         <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                            I don't just "do marketing". I help Doctors and Healthcare professionals in Gujarat build a brand that lasts.
+                            I don't just "build websites". I engineer <span className="text-slate-900 font-semibold">Scalable Digital Products</span> and growth systems for businesses globally.
                         </p>
                         <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                            After observing that most marketing agencies sell generic "packages" to doctors without understanding medical ethics or patient psychology, I founded <strong>Epsilon Technology</strong> to change that.
+                            With a core background in <strong>Full-Stack Development (Next.js, React Native)</strong>, I bridge the gap between complex technology and real business results. Whether it's a doctor's clinic or an e-commerce giant, I build software that works.
                         </p>
 
                         <div className="flex gap-4 mb-8">
-                            <Link href="https://www.instagram.com/epsilontechnology/" target="_blank" className="p-3 bg-slate-100 rounded-full hover:bg-blue-100 hover:text-blue-600 transition-colors">
+                            <Link href="https://www.instagram.com/jaydeepkataria/" target="_blank" className="p-3 bg-slate-100 rounded-full hover:bg-pink-100 hover:text-pink-600 transition-colors">
                                 <Instagram size={24} />
                             </Link>
-                            <Link href="https://www.linkedin.com/company/epsilon-technology8" className="p-3 bg-slate-100 rounded-full hover:bg-blue-100 hover:text-blue-600 transition-colors">
+                            <Link href="https://www.linkedin.com/in/jaydeepkataria/" target="_blank" className="p-3 bg-slate-100 rounded-full hover:bg-blue-100 hover:text-blue-600 transition-colors">
                                 <Linkedin size={24} />
                             </Link>
-                            <Link href="https://dribbble.com/epsilontech" className="p-3 bg-slate-100 rounded-full hover:bg-pink-100 hover:text-pink-600 transition-colors">
-                                <Dribbble size={24} />
+                            <Link href="https://www.upwork.com/freelancers/~01ac2d5143e46e07de?mp_source=share" target="_blank" className="p-3 bg-slate-100 rounded-full hover:bg-green-100 hover:text-green-600 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-code-2"><path d="m18 16 4-4-4-4" /><path d="m6 8-4 4 4 4" /><path d="m14.5 4-5 16" /></svg>
                             </Link>
                         </div>
 
@@ -75,13 +75,13 @@ export default function AboutPage() {
                     <h2 className="text-3xl font-bold text-slate-900 mb-8">My Journey</h2>
                     <div className="prose prose-lg prose-slate text-slate-600">
                         <p>
-                            It started with a simple observation in Junagadh. I noticed brilliant doctors sitting in empty clinics while average ones were overflowing with patients. The difference wasn't skill—it was <strong>Digital Visibility</strong>.
+                            It started with a love for code. From building my first application to deploying complex enterprise systems, I realized that <strong>Technology</strong> is the biggest leverage a business can have.
                         </p>
                         <p>
-                            I realized that the "best" doctor isn't always the busiest. The busiest doctor is the one patients can <em>find</em> and <em>trust</em> online.
+                            But code without purpose is useless. I saw businesses struggling with slow websites, buggy apps, and disjointed marketing. They didn't need just a "developer"—they needed a <em>Technical Partner</em> who understood their growth goals.
                         </p>
                         <p>
-                            That's when I decided to specialize solely in <strong>Healthcare Marketing</strong>. Unlike generic agencies that juggle real estate, restaurants, and salons, I focus 100% on medical professionals. I know the difference between 'Cardiology' and 'Radiology', and I know what patients search for in each.
+                            That's why <strong>Epsilon Technology</strong> exists. We combine elite-level engineering (React, Node.js, AWS) with strategic marketing execution. I personally oversee the architecture of every project to ensure it's not just "delivered", but <strong>engineered for success</strong>.
                         </p>
                     </div>
                 </div>
@@ -93,12 +93,12 @@ export default function AboutPage() {
                     <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Why I'm Different</h2>
                     <div className="grid md:grid-cols-2 gap-8">
                         {[
-                            "Exclusively Healthcare Focused",
-                            "Storytelling First Approach",
-                            "Data-Driven SEO Strategies",
-                            "Ethical Marketing Practices",
-                            "Native Gujarati Content Expert",
-                            "Direct Access to Founder"
+                            "Full-Stack Architecture Expert",
+                            "Data-Driven Growth Strategies",
+                            "Performance-First Coding",
+                            "Mobile & Web Specialist",
+                            "Direct Access to Founder",
+                            "Global Delivery Standards"
                         ].map((item, i) => (
                             <div key={i} className="flex items-center gap-4 p-4 border rounded-xl bg-slate-50">
                                 <CheckCircle2 className="text-green-500 shrink-0" />
