@@ -98,7 +98,7 @@ export default function RootLayout({
                   "description": "Specialized social media growth for doctors and premium IT software services.",
                   "contactPoint": {
                     "@type": "ContactPoint",
-                    "email": "jaydeep@epsilon-technology.com",
+                    "email": "contact@epsilon-technology.com",
                     "contactType": "customer service"
                   },
                   "sameAs": [

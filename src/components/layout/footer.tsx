@@ -66,7 +66,7 @@ export function Footer() {
                             </div>
                             <div className="flex items-center gap-3">
                                 <Mail size={18} className="text-blue-500 shrink-0" />
-                                <a href="mailto:jaydeep@epsilon-technology.com" className="hover:text-white transition-colors">jaydeep@epsilon-technology.com</a>
+                                <a href="mailto:contact@epsilon-technology.com" className="hover:text-white transition-colors">contact@epsilon-technology.com</a>
                             </div>
                             <div className="flex items-center gap-3">
                                 <Phone size={18} className="text-blue-500 shrink-0" />

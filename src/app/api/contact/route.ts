@@ -25,7 +25,7 @@ export async function POST(request: Request) {
 
         const mailOptions = {
             from: process.env.EMAIL_USER, // Sender address
-            to: 'jaydeep@epsilon-technology.com', // Receiver address
+            to: 'contact@epsilon-technology.com', // Receiver address
             subject: `New Lead: ${name} - Doctor Growth Consultation`,
             html: `
                 <h2>New Booking Request</h2>
